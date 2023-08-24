@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre Loading Skeleton</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+<div class="grid">
+    
+</div>
+
+<template id="card-template">
+    <div class="card">
+        <div class="header">
+          <img class="header-img skeleton" src="https://source.unsplash.com/100x100/?nature" />
+          <div class="title" data-title>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+          </div>
+        </div>
+        <div data-body>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+        </div>
+    </div>
+</template>
+
+<script>
+   async function fetchData() {
+    const cardTemplate = document.getElementById('card-template');
+    const grid = document.querySelector('.grid');
+    for(let i=0; i < 10; i++) {
+        const fragmentNode = cardTemplate.content.cloneNode(true);
+        grid.appendChild(fragmentNode);
+    }
+
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+    const response = await res.json();
+    grid.innerHTML = '';
+    response.forEach(post => {
+        const fragmentNode = cardTemplate.content.cloneNode(true);
+        fragmentNode.querySelector('[data-title]').textContent = post.title;
+        fragmentNode.querySelector('[data-body]').textContent = post.body;
+        grid.appendChild(fragmentNode);
+    })
+   }
+
+   fetchData();
+</script>
+</body>
+</html>

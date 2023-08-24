@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Dropdown</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Information</button>
+            <div class="dropdown-menu" data-dropdown-menu>
+                <div class="list-1">
+                    <h3>Free Tutorials</h3>
+                    <div>All</div>
+                    <div>Latest</div>
+                    <div>Popular</div>
+                </div>
+
+                <div class="list-2">
+                    <h3>Courses</h3>
+                    <div>JS</div>
+                    <div>CSS</div>
+                    <div>React</div>
+                </div>
+
+                <div class="list-3">
+                    <h3>Blogs</h3>
+                    <div>All</div>
+                    <div>Latest</div>
+                    <div>Popular</div>
+                </div>
+
+                <div class="list-4">
+                    <h3>Others</h3>
+                    <div>Twitter</div>
+                    <div>Newsletter</div>
+                    <div>Discord</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <a href="" class="link">Pricing</a>
+        </div>
+
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Login</button>
+            <div class="dropdown-menu" data-dropdown-menu>
+                <form class="login-form">
+                    <div>
+                        <label for="username">Name </label>
+                        <input type="text" id="username" name="username">
+                    </div>
+
+                    <div>
+                        <label for="pass">Password </label>
+                        <input type="password" id="pass" name="pass">
+                    </div>
+
+                    <button>Login</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <button class="modal-btn" data-modal-target="#main"><span class="actionText">Open</span> Image Carousel Modal</button>
+        <div class="container" id="main">
+                <button class="btns btn-prev" data-prev-btn="-1">&#8656;</button>
+                <button class="btns btn-next" data-next-btn="1">&#8658;</button>
+                
+                <div class="img-wrapper">
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1612422499157-addd7df3526e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" alt="" class="active">
+                    </div>
+            
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1692980136992-b45785a6116f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="">
+                    </div>
+            
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1693086256666-edb3ed7e664a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="">
+                    </div>
+    
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1612252385118-94cb48e879dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="">
+                    </div>
+    
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1553447305-572c1904fdf8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="">
+                    </div>
+                </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+</body>
+</html>

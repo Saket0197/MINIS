@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+td,th,table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.status-container{
+    margin-top: 1rem;
+    background-color: lightblue;
+}
+
+.status{
+    font-weight: bold;
+}
+
+[data-bmi-status='underweight'].active{
+    background-color: burlywood;
+}
+
+[data-bmi-status='normal'].active{
+    background-color: green;
+}
+
+[data-bmi-status='overweight'].active{
+    background-color: yellow;
+}
+
+[data-bmi-status='obese'].active{
+    background-color: red;
+}

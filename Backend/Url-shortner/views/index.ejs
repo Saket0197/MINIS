@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td,th{
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 0.5rem;
+        }
+        table{
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/compress/url" method="POST">
+            <input type="text" name="completeUrl">
+            <button>Compress</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Full url</th>
+                    <th>Compressed Url</th>
+                    <th>Visits</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% for(let eachUrl of urlArr) { %>
+                    <tr>
+                        <td><a href="<%= eachUrl.fullUrl %>" target="_blank"><%= eachUrl.fullUrl %></a></td>
+                        <td><a href="<%= eachUrl.compressedUrl %>" target="_blank"><%= eachUrl.compressedUrl %></a></td>
+                        <td><%= eachUrl.clicks %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+
+            <colgroup>
+                <col>
+                <col span='2' style="background-color: lightblue;"> 
+            </colgroup>
+        </table>
+    </div>
+</body>
+</html>
